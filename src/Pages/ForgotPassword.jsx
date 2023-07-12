@@ -17,7 +17,10 @@ function ForgotPassword() {
   const { mutate, isLoading } = useMutation(
     (data) =>
       axios
-        .post('http://localhost:9000/api/forgot-password', data)
+        .post(
+          'https://inventory-backend-six.vercel.app/api/forgot-password',
+          data
+        )
         .catch((error) => {
           throw error;
         }),
@@ -27,11 +30,11 @@ function ForgotPassword() {
           toast.error('Entered Email Is Not Registered With Us');
         } else {
           toast.success('Link Send Successfully! Please Check Your Email');
-           navigate('/login')
+          navigate('/login');
         }
       },
       onError: (error) => {
-          toast.error('Unable To Process Your Request');  
+        toast.error('Unable To Process Your Request');
       },
     }
   );

@@ -20,9 +20,11 @@ function SignupForm() {
 
   const { mutate, isLoading } = useMutation(
     (user) =>
-      axios.post('http://localhost:9000/api/signup', user).catch((error) => {
-        throw error;
-      }),
+      axios
+        .post('https://inventory-backend-six.vercel.app/api/signup', user)
+        .catch((error) => {
+          throw error;
+        }),
 
     {
       onSuccess: (data) => {
