@@ -5,6 +5,7 @@ import LoadingSpinner from '../../Ui/Spinner';
 import { HiMiniPlusCircle } from 'react-icons/hi2';
 import { useDispatch } from 'react-redux';
 import { addItem } from './itemSlice';
+import EmptyPanelInfo from '../../Ui/EmptyPanelInfo';
 function ItemList() {
     const dispatch=useDispatch()
   const { data, isLoading } = useQuery({
@@ -14,12 +15,7 @@ function ItemList() {
 
   if ( data?.data.items.length === 0) {
     return (
-      <div className="flex  flex-col items-center justify-center">
-        <HiMiniPlusCircle className="h-12 w-12 text-slate-100" />
-        <p className="font-medium text-slate-100">
-          Please add some items to Start
-        </p>
-      </div>
+     <EmptyPanelInfo title="items"/>
     );
   }
 

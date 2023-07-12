@@ -19,7 +19,7 @@ function InventoryChart() {
   });
 
   if (!data) {
-    return <p>Please add some details to view dashboard</p>;
+    return null
   }
 
   return (

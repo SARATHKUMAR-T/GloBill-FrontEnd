@@ -5,22 +5,16 @@ import { useDispatch } from 'react-redux';
 import PurchaseRow from './PurchaseRow';
 import { getPurchase } from '../../services/purchase';
 import { addPurchase } from './purchaseSlice';
+import EmptyPanelInfo from '../../Ui/EmptyPanelInfo';
 function PurchaseList() {
-  const dispatch=useDispatch()
+  const dispatch = useDispatch();
   const { data, isLoading } = useQuery({
     queryKey: ['purchase'],
     queryFn: getPurchase,
   });
 
-  if ( data?.data.purchase.length === 0) {
-    return (
-      <div className="flex  flex-col items-center justify-center">
-        <HiMiniPlusCircle className="h-12 w-12 text-slate-100" />
-        <p className="font-medium text-slate-100">
-          Please add some Purchase to Start
-        </p>
-      </div>
-    );
+  if (data?.data.purchase.length === 0) {
+    return <EmptyPanelInfo title="purchase" />;
   }
 
   if (isLoading) {
@@ -29,7 +23,7 @@ function PurchaseList() {
 
   if (data) {
     const purchase = data.data.purchase;
-       dispatch(addPurchase(purchase))
+    dispatch(addPurchase(purchase));
 
     return (
       <div className=" overflow-x-auto rounded-lg ">

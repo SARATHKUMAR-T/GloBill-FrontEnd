@@ -1,10 +1,10 @@
 import { useQuery } from '@tanstack/react-query';
 import LoadingSpinner from '../../Ui/Spinner';
-import { HiMiniPlusCircle } from 'react-icons/hi2';
 import { useDispatch } from 'react-redux';
 import SalesRow from './SalesRow';
 import { getSales } from '../../services/sales';
 import { addSales } from './salesSlice';
+import EmptyPanelInfo from '../../Ui/EmptyPanelInfo';
 function SalesList() {
   const dispatch = useDispatch();
   const { data, isLoading } = useQuery({
@@ -16,14 +16,7 @@ function SalesList() {
     return <LoadingSpinner />;
   }
   if (!data || data.data.sales.length === 0) {
-    return (
-      <div className="flex  flex-col items-center justify-center">
-        <HiMiniPlusCircle className="h-12 w-12 text-slate-100" />
-        <p className="font-medium text-slate-100">
-          Please add some Sales to Start
-        </p>
-      </div>
-    );
+    return <EmptyPanelInfo title="Sales" />;
   }
 
   if (data) {

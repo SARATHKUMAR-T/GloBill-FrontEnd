@@ -3,6 +3,7 @@ import { getCustomers } from '../../services/customer';
 import CustomerRow from './CustomerRow';
 import LoadingSpinner from '../../Ui/Spinner';
 import { HiMiniPlusCircle } from 'react-icons/hi2';
+import EmptyPanelInfo from '../../Ui/EmptyPanelInfo';
 
 function CustomerList() {
   const { data, isLoading } = useQuery({
@@ -16,12 +17,7 @@ function CustomerList() {
 
   if (data?.data?.customers.length === 0) {
     return (
-      <div className="flex h-full  items-center justify-center">
-        <div className="mx-auto h-full max-w-6xl">
-          <HiMiniPlusCircle className="h-12 w-12 text-blue-700" />
-          <p className="font-medium text-blue-700">Please add some customers</p>
-        </div>
-      </div>
+      <EmptyPanelInfo title="Customers"/>
     );
   }
 

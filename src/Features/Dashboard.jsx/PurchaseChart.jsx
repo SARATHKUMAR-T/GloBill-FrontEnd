@@ -24,6 +24,10 @@ function PurchaseChart() {
     };
   });
 
+  if(!data){
+    return null
+  }
+
   
 
   return (
