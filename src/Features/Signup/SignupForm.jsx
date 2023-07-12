@@ -93,6 +93,23 @@ function SignupForm() {
               </p>
             )}
           </div>
+          {/* Company name field */}
+          <div>
+            <label htmlFor="companyName" id="companyName" className="block ">
+              Company Name
+            </label>
+            <input
+              {...register('companyName')}
+              className="int"
+              placeholder="Company"
+              id="companyName"
+            />
+            {errors?.lastName?.type === 'required' && (
+              <p className="mb-1  rounded-lg bg-red-100 p-1 text-red-500">
+                * This Field Is Required
+              </p>
+            )}
+          </div>
           {/* Email Field */}
           <div>
             <label htmlFor="email" id="email" className="block ">
