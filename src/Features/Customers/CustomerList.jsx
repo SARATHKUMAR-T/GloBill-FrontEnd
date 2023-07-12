@@ -16,8 +16,8 @@ function CustomerList() {
 
   if (data?.data?.customers.length === 0) {
     return (
-      <div className="flex   items-center justify-center">
-        <div className="mx-auto max-w-6xl">
+      <div className="flex h-full  items-center justify-center">
+        <div className="mx-auto h-full max-w-6xl">
           <HiMiniPlusCircle className="h-12 w-12 text-blue-700" />
           <p className="font-medium text-blue-700">Please add some customers</p>
         </div>
