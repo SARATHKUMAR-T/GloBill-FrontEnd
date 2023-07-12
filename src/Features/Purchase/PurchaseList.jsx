@@ -1,6 +1,5 @@
 import { useQuery } from '@tanstack/react-query';
 import LoadingSpinner from '../../Ui/Spinner';
-import { HiMiniPlusCircle } from 'react-icons/hi2';
 import { useDispatch } from 'react-redux';
 import PurchaseRow from './PurchaseRow';
 import { getPurchase } from '../../services/purchase';

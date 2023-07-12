@@ -2,7 +2,6 @@ import { useQuery } from '@tanstack/react-query';
 import { getCustomers } from '../../services/customer';
 import CustomerRow from './CustomerRow';
 import LoadingSpinner from '../../Ui/Spinner';
-import { HiMiniPlusCircle } from 'react-icons/hi2';
 import EmptyPanelInfo from '../../Ui/EmptyPanelInfo';
 
 function CustomerList() {

@@ -2,7 +2,6 @@ import { useQuery } from '@tanstack/react-query';
 import ItemsRow from './ItemsRow';
 import { getItems } from '../../services/items';
 import LoadingSpinner from '../../Ui/Spinner';
-import { HiMiniPlusCircle } from 'react-icons/hi2';
 import { useDispatch } from 'react-redux';
 import { addItem } from './itemSlice';
 import EmptyPanelInfo from '../../Ui/EmptyPanelInfo';
