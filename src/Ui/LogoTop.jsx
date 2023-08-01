@@ -1,15 +1,15 @@
-import { Link } from "react-router-dom"
+import { Link } from 'react-router-dom';
 
 function LogoTop() {
-    return (
-        <div className="py-8 px-6 text-slate-300">
-          <div>
-            <Link to='/'>
-            <p className="text-xl font-semibold pl-4 mt-1">Globill</p>
-            </Link>
-          </div>
-        </div>
-    )
+  return (
+    <div className="px-6 py-8 text-slate-300">
+      <div>
+        <Link to="/">
+          <p className="mt-1 pl-4 text-xl font-semibold">Globill</p>
+        </Link>
+      </div>
+    </div>
+  );
 }
 
-export default LogoTop
+export default LogoTop;
