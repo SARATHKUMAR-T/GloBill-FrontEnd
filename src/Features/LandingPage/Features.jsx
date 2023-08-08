@@ -1,18 +1,21 @@
 import inventory from '../../Assets/startup.svg';
 import feedback from '../../Assets/Feedback.svg';
 import analytics from '../../Assets/Dark-analytics.svg';
-import purchase from '../../Assets/woman-trading-in-forex.svg';
+import purchase from '../../Assets/purchase.svg';
 
 function FeautreRow() {
   return (
-    <section id='features' className="min-h-screen max-w-full pb-20 bg-slate-200 px-6 py-6 text-slate-100">
+    <section
+      id="features"
+      className="min-h-screen max-w-full bg-slate-200 px-6 py-6 pb-20 text-slate-100"
+    >
       <div className="relative mx-auto mb-14 mt-12 flex h-36  items-center  bg-slate-900 bg-cover bg-center pb-3">
         <div className="absolute ml-3 h-[90%] w-[98%]  border-2 border-dashed border-green-500"></div>
         <h1 className=" w-full text-center text-6xl    font-extrabold uppercase tracking-widest">
           Features we known for
         </h1>
       </div>
-      <div className="mt-8 grid min-h-screen gap-y-20 grid-cols-2 grid-rows-4  px-20 text-black">
+      <div className="mt-8 grid min-h-screen grid-cols-2 grid-rows-4 gap-y-20  px-20 text-black">
         <div className="flex flex-col items-center justify-center px-4  text-center  ">
           <h3 className="text-4xl font-extrabold capitalize text-green-500">
             Items Management
@@ -30,13 +33,21 @@ function FeautreRow() {
             inventory management today for optimized efficiency.
           </p>
         </div>
-        <div className=" border-t-2 border-green-500 hover:border-t-4 duration-300 hover:scale-105 hover:border-b-4 border-l-2 border-l-red-600  rounded-full border-r-2 border-r-yellow-400 border-b-2 border-b-blue-500 flex items-center justify-center">
-            <img className="  mx-auto my-auto h-[80%] w-[80%]" src={analytics} alt='inventory' />
+        <div className=" flex items-center justify-center rounded-full border-b-2 border-l-2 border-r-2 border-t-2  border-green-500 border-b-blue-500 border-l-red-600 border-r-yellow-400 duration-300 hover:scale-105 hover:border-b-4 hover:border-t-4">
+          <img
+            className="  mx-auto my-auto h-[80%] w-[80%]"
+            src={analytics}
+            alt="inventory"
+          />
         </div>
-        <div className=" border-t-2 border-green-500 hover:border-t-4 duration-300 hover:scale-105 hover:border-b-4 border-l-2 border-l-red-600  rounded-full border-r-2 border-r-yellow-400 border-b-2 border-b-blue-500 flex items-center justify-center">
-            <img className="  mx-auto my-auto h-[80%] w-[80%]" src={inventory} alt='inventory' />
+        <div className=" flex items-center justify-center rounded-full border-b-2 border-l-2 border-r-2 border-t-2  border-green-500 border-b-blue-500 border-l-red-600 border-r-yellow-400 duration-300 hover:scale-105 hover:border-b-4 hover:border-t-4">
+          <img
+            className="  mx-auto my-auto h-[80%] w-[80%]"
+            src={inventory}
+            alt="inventory"
+          />
         </div>
-        <div className=" px-4 flex items-center justify-center flex-col text-center   ">
+        <div className=" flex flex-col items-center justify-center px-4 text-center   ">
           <h3 className="text-4xl font-extrabold capitalize text-green-500">
             Sales Tracking Made Easy
           </h3>
@@ -55,7 +66,7 @@ function FeautreRow() {
             approach and drive success.
           </p>
         </div>
-        <div className="  px-4 flex flex-col items-center justify-center text-center  ">
+        <div className="  flex flex-col items-center justify-center px-4 text-center  ">
           <h3 className="text-4xl font-extrabold capitalize text-green-500">
             Simplify Purchases
           </h3>
@@ -74,14 +85,22 @@ function FeautreRow() {
             procurement efficiency and drive greater value.
           </p>
         </div>
-        <div className=" border-t-2 border-green-500 hover:border-t-4 duration-300 hover:scale-105 hover:border-b-4 border-l-2 border-l-red-600  rounded-full border-r-2 border-r-yellow-400 border-b-2 border-b-blue-500 flex items-center justify-center">
-            <img className="  mx-auto my-auto h-[80%] w-[80%]" src={purchase} alt='inventory' />
+        <div className=" flex items-center justify-center rounded-full border-b-2 border-l-2 border-r-2 border-t-2  border-green-500 border-b-blue-500 border-l-red-600 border-r-yellow-400 duration-300 hover:scale-105 hover:border-b-4 hover:border-t-4">
+          <img
+            className="  mx-auto my-auto h-[80%] w-[80%]"
+            src={purchase}
+            alt="inventory"
+          />
         </div>
         {/* customer */}
-        <div className=" border-t-2 border-green-500 hover:border-t-4 duration-300 hover:scale-105 hover:border-b-4 border-l-2 border-l-red-600  rounded-full border-r-2 border-r-yellow-400 border-b-2 border-b-blue-500 flex items-center justify-center">
-            <img className="  mx-auto my-auto h-[80%] w-[80%]" src={feedback} alt='inventory' />
+        <div className=" flex items-center justify-center rounded-full border-b-2 border-l-2 border-r-2 border-t-2  border-green-500 border-b-blue-500 border-l-red-600 border-r-yellow-400 duration-300 hover:scale-105 hover:border-b-4 hover:border-t-4">
+          <img
+            className="  mx-auto my-auto h-[80%] w-[80%]"
+            src={feedback}
+            alt="inventory"
+          />
         </div>
-        <div className="  px-4 flex items-center justify-center flex-col text-center  ">
+        <div className="  flex flex-col items-center justify-center px-4 text-center  ">
           <h3 className="text-4xl font-extrabold capitalize text-green-500">
             Customer Management Redefined
           </h3>

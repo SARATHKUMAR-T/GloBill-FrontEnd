@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 
 function Footer() {
   return (
-    <footer id='contact' class="bg-gray-100 dark:bg-gray-900">
+    <footer id="contact" class="bg-gray-100 dark:bg-gray-900">
       <div class="mx-auto w-full max-w-screen-xl">
         <div class="grid grid-cols-2 gap-8 px-4 py-6 md:grid-cols-4 lg:py-8">
           <div>
