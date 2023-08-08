@@ -19,7 +19,7 @@ function Hero() {
                 spy={true}
                 smooth={true}
                 offset={-10}
-                duration={500}
+                duration={600}
               >
                 Features
               </Scroll>
