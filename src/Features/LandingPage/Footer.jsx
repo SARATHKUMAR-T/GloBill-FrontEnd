@@ -111,8 +111,13 @@ function Footer() {
         </div>
         <div className="bg-gray-200 px-4 py-6 dark:bg-gray-700 md:flex md:items-center md:justify-between">
           <span className="text-sm text-gray-500 dark:text-gray-300 sm:text-center">
-           @ Designed and Developed By{' '}
-            <a className='text-blue-700 font-semibold underline ' href="https://saraensemble.netlify.app/" target="_">
+            @ Designed and Developed By{' '}
+            <a
+              className="font-semibold text-blue-700 underline "
+              href="https://saraensemble.netlify.app/"
+              target="_blank"
+              rel="noreferrer"
+            >
               Sarath.dev
             </a>
           </span>
