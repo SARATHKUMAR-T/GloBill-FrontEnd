@@ -11,7 +11,7 @@ function Hero() {
             <div>
               <li className="font-bold tracking-wider  ">GloBill</li>
             </div>
-            <div className="flex gap-16 text-sm font-semibold">
+            <div className="flex  sm:gap-8 md:gap-16 text-sm font-semibold">
               <Scroll
                 className="cursor-pointer"
                 activeClass="active"

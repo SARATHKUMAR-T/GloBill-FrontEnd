@@ -13,7 +13,7 @@ function Testimonials() {
       <div className="relative mx-auto mb-14 mt-6 flex h-36  items-center  bg-slate-900 bg-cover bg-center pb-3">
         <div className="absolute ml-3 h-[90%] w-[98%]  border-2 border-dashed border-green-500"></div>
         <h1 className=" w-full text-center text-6xl  font-extrabold  uppercase tracking-widest text-white">
-          Our Success Story!
+          You're in good company
         </h1>
       </div>
       <div className="mx-auto grid max-w-6xl grid-cols-4 grid-rows-3">

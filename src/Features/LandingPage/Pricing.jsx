@@ -14,7 +14,7 @@ function Pricing() {
           Pricing
         </h1>
       </div>
-      <div className=" mx-auto flex max-w-6xl flex-col items-center justify-center space-y-4 pt-4 text-sm sm:flex-row sm:space-x-14 sm:space-y-0  ">
+      <div className=" mx-auto flex max-w-6xl flex-col items-center justify-center space-y-4 pt-4 text-sm md:flex-row md:space-x-14 md:space-y-0  ">
         <div>
           <div className="card-container w-90  cursor-pointer rounded-md  bg-slate-50 px-16 py-6 text-center font-semibold shadow-md transition-all duration-300 hover:-translate-y-2 ">
             {/* card top box */}
