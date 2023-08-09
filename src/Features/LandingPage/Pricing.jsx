@@ -6,7 +6,7 @@ function Pricing() {
   return (
     <section
       id="pricing"
-      className="min-h-screen max-w-full bg-slate-200 px-4 py-6 pb-32"
+      className="min-h-screen max-w-full bg-slate-200 px-4 pt-14 py-6 pb-32"
     >
       <div className="relative mx-auto mb-14 mt-6 flex h-36  items-center  bg-slate-900 bg-cover bg-center pb-3">
         <div className="absolute ml-3 h-[90%] w-[98%]  border-2 border-dashed border-green-500"></div>

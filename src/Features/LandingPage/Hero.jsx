@@ -4,17 +4,28 @@ import { Link as Scroll } from 'react-scroll';
 
 function Hero() {
   return (
-    <section className=" grid min-h-screen  grid-cols-1   text-slate-200">
+    <section
+      id="hero"
+      className=" grid min-h-screen  grid-cols-1   text-slate-200"
+    >
       <div class="group-hover:from=gray-50 absolute bottom-0 left-0 right-0 top-0 flex items-center justify-center bg-gradient-to-br from-transparent to-black group-hover:to-white group-hover:opacity-70">
         <nav className="fixed left-0 right-0 top-0 z-50 h-14 bg-slate-300 bg-opacity-80  ">
           <ul className="flex items-center justify-between px-6 py-2 text-green-600">
             <div>
-              <li className="font-bold tracking-wider  ">GloBill</li>
+              <Scroll
+                className="cursor-pointer font-bold tracking-wide"
+                to="hero"
+                spy={true}
+                smooth={true}
+                offset={-10}
+                duration={600}
+              >
+                GloBill
+              </Scroll>
             </div>
-            <div className="flex  sm:gap-8 md:gap-16 text-sm font-semibold">
+            <div className="flex  text-sm font-semibold sm:gap-8 md:gap-16">
               <Scroll
                 className="cursor-pointer"
-                activeClass="active"
                 to="features"
                 spy={true}
                 smooth={true}
@@ -25,7 +36,6 @@ function Hero() {
               </Scroll>
               <Scroll
                 className="cursor-pointer"
-                activeClass="active"
                 to="testimonials"
                 spy={true}
                 smooth={true}
@@ -36,18 +46,16 @@ function Hero() {
               </Scroll>
               <Scroll
                 className="cursor-pointer"
-                activeClass="active"
                 to="pricing"
                 spy={true}
                 smooth={true}
-                offset={-40}
+                offset={10}
                 duration={500}
               >
                 Pricing
               </Scroll>
               <Scroll
                 className="cursor-pointer"
-                activeClass="active"
                 to="contact"
                 spy={true}
                 smooth={true}
