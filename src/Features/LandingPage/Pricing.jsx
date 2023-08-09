@@ -44,15 +44,7 @@ function Pricing() {
                 ></IoMdCheckmarkCircle>
                 <span className="text-md p-2 font-semibold ">5GB Storage</span>
               </div>
-              <div className="">
-                <IoMdCheckmarkCircle
-                  name="checkmark-"
-                  className="inline-block h-6 w-6 text-green-500"
-                ></IoMdCheckmarkCircle>
-                <span className="text-md p-2 font-semibold">
-                  Unlimited Public Projects
-                </span>
-              </div>
+
               <div>
                 <IoMdCheckmarkCircle
                   name="checkmark-"
@@ -62,15 +54,7 @@ function Pricing() {
                   Community Access
                 </span>
               </div>
-              <div className="text-slate-400">
-                <IoCloseCircle
-                  name="close-"
-                  className="inline-block h-6 w-6 text-red-500"
-                ></IoCloseCircle>
-                <span className="text-md p-2 font-semibold">
-                  Unlimited Private Projects
-                </span>
-              </div>
+
               <div className="text-slate-400">
                 <IoCloseCircle
                   name="close-"
@@ -138,24 +122,14 @@ function Pricing() {
                 <IoMdCheckmarkCircle className="inline-block h-6 w-6 text-green-500"></IoMdCheckmarkCircle>
                 <span className="text-md p-2 font-semibold ">50GB Storage</span>
               </div>
-              <div>
-                <IoMdCheckmarkCircle className="inline-block h-6 w-6 text-green-500"></IoMdCheckmarkCircle>
-                <span className="text-md p-2 font-semibold">
-                  Unlimited Public Projects
-                </span>
-              </div>
+
               <div>
                 <IoMdCheckmarkCircle className="inline-block h-6 w-6 text-green-500"></IoMdCheckmarkCircle>
                 <span className="text-md p-2 font-semibold">
                   Community Access
                 </span>
               </div>
-              <div>
-                <IoMdCheckmarkCircle className="inline-block h-6 w-6 text-green-500"></IoMdCheckmarkCircle>
-                <span className="text-md p-2 font-semibold">
-                  Unlimited Private Projects
-                </span>
-              </div>
+
               <div>
                 <IoMdCheckmarkCircle className="inline-block h-6 w-6 text-green-500"></IoMdCheckmarkCircle>
                 <span className="text-md p-2 font-semibold ">
@@ -221,15 +195,7 @@ function Pricing() {
                 ></IoMdCheckmarkCircle>
                 <span className="text-md p-2  font-bold">150GB Storage</span>
               </div>
-              <div>
-                <IoMdCheckmarkCircle
-                  name="checkmark-outline"
-                  className="inline-block h-6 w-6 text-green-500"
-                ></IoMdCheckmarkCircle>
-                <span className="text-md p-2 font-semibold">
-                  Unlimited Public Projects
-                </span>
-              </div>
+
               <div>
                 <IoMdCheckmarkCircle
                   name="checkmark-outline"
@@ -239,15 +205,7 @@ function Pricing() {
                   Community Access
                 </span>
               </div>
-              <div>
-                <IoMdCheckmarkCircle
-                  name="checkmark-outline"
-                  className="inline-block h-6 w-6 text-green-500"
-                ></IoMdCheckmarkCircle>
-                <span className="text-md p-2 font-semibold">
-                  Unlimited Private Projects
-                </span>
-              </div>
+
               <div>
                 <IoMdCheckmarkCircle
                   name="checkmark-outline"
