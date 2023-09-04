@@ -163,7 +163,7 @@ function SignupForm() {
         <div className="mt-2 text-center">
           <Link to="/login">
             <span>Already Have An Account?</span>{' '}
-            <span className="text-blue-900">Login</span>
+            <span className="text-blue-700">Login</span>
           </Link>
         </div>
       </div>

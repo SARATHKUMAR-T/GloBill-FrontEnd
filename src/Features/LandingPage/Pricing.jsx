@@ -1,12 +1,53 @@
+import { decode } from 'html-entities';
+import { toast } from 'react-hot-toast';
 import { IoMdCheckmarkCircle } from 'react-icons/io';
 import { IoCloseCircle } from 'react-icons/io5';
 import { Link } from 'react-router-dom';
 
 function Pricing() {
+  const indianRubee = decode('&#x20B9');
+
+  const paymentHandler = (amount) => {
+    // const res = await fetch('http://localhost:9000/api/payment', {
+    //   method: 'POST',
+    //   headers: {
+    //     'content-type': 'application/json',
+    //   },
+    //   body: JSON.stringify({ amount: 500 }),
+    // });
+    // const final = await res.json();
+    // console.log(final);
+    console.log(amount, 'amount');
+
+    var options = {
+      key: 'rzp_test_BhRFOnt4sE99VP',
+      key_secret: 'dZCdEmJ2iGAO0IoVWlHrXwqV',
+      amount: amount * 100,
+      currency: 'INR',
+      name: 'GloBill',
+      description: 'Yearly Subscription',
+      handler: function (response) {
+        toast.success('Your Payment Is Received');
+      },
+      prefill: {
+        name: 'customer',
+        email: 'custome@email.com',
+        contact: '',
+      },
+      notes: {
+        address: 'Razorpay Corporate office',
+      },
+      theme: {
+        color: '#1e40af',
+      },
+    };
+    var pay = new window.Razorpay(options);
+    pay.open();
+  };
   return (
     <section
       id="pricing"
-      className="min-h-screen max-w-full bg-slate-200 px-4 pt-14 py-6 pb-32"
+      className="min-h-screen max-w-full bg-slate-200 px-4 py-6 pb-32 pt-14"
     >
       <div className="relative mx-auto mb-14 mt-6 flex h-36  items-center  bg-slate-900 bg-cover bg-center pb-3">
         <div className="absolute ml-3 h-[90%] w-[98%]  border-2 border-dashed border-green-500"></div>
@@ -24,7 +65,7 @@ function Pricing() {
               </p>
               <p className="text-sm text-slate-700  ">
                 <span className="font-sans text-6xl font-medium text-slate-800">
-                  $0
+                  {indianRubee}0
                 </span>
                 /month
               </p>
@@ -105,9 +146,9 @@ function Pricing() {
               </p>
               <p className="text-sm text-slate-700  ">
                 <span className="font-sans text-6xl font-medium text-slate-800">
-                  $9
+                  {indianRubee}499
                 </span>
-                /month
+                /year
               </p>
             </div>
             <div className="card-details flex flex-col space-y-4 border-t-2 border-slate-500 text-left">
@@ -152,14 +193,13 @@ function Pricing() {
                 </span>
               </div>
               <div className="pt-6 ">
-                <Link to="/signup">
-                  <button
-                    className="text-md w-full rounded-2xl border-none bg-blue-700 p-3 font-semibold  text-white transition-all
+                <button
+                  onClick={() => paymentHandler(499)}
+                  className="text-md w-full rounded-2xl border-none bg-blue-700 p-3 font-semibold  text-white transition-all
                   duration-300 hover:-translate-y-1"
-                  >
-                    Get Started
-                  </button>
-                </Link>
+                >
+                  Get Started
+                </button>
               </div>
             </div>
           </div>
@@ -175,9 +215,9 @@ function Pricing() {
               </p>
               <p className="text-sm text-slate-700  ">
                 <span className="font-sans text-6xl font-medium text-slate-800">
-                  $49
+                  {indianRubee}999
                 </span>
-                /month
+                /year
               </p>
             </div>
             <div className="card-details flex flex-col space-y-4 border-t-2 border-slate-500 text-left">
@@ -234,14 +274,13 @@ function Pricing() {
                 </span>
               </div>
               <div className="pt-6 ">
-                <Link to="/signup">
-                  <button
-                    className="text-md w-full rounded-2xl border-none bg-blue-700 p-3 font-semibold  text-white transition-all
+                <button
+                  onClick={() => paymentHandler(999)}
+                  className="text-md w-full rounded-2xl border-none bg-blue-700 p-3 font-semibold  text-white transition-all
                   duration-300 hover:-translate-y-1"
-                  >
-                    Get Started
-                  </button>
-                </Link>
+                >
+                  Get Started
+                </button>
               </div>
             </div>
           </div>

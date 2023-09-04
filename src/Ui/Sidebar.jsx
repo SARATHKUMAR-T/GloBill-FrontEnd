@@ -49,14 +49,7 @@ function Sidebar() {
             </div>
           </NavLink>
         </li>
-        {/* <li className="w-full ">
-          <NavLink to="expenses">
-            <div className="flex w-full items-center gap-2 px-2 py-3 text-sm  font-semibold tracking-wide opacity-90    duration-300 hover:bg-slate-200  hover:opacity-100 md:px-3 lg:px-16">
-              <HiOutlineBanknotes className="h-6 w-6" />
-              <span className="capitalize">expenses</span>
-            </div>
-          </NavLink>
-        </li> */}
+      
         <li className="w-full ">
           <NavLink to="customers">
             <div className="flex w-full items-center gap-2 px-2 py-3 text-sm  font-semibold tracking-wide opacity-90    duration-300 hover:bg-slate-200  hover:opacity-100 md:px-3 lg:px-16">
