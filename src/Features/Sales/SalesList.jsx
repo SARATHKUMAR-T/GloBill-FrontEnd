@@ -1,10 +1,9 @@
 import { useQuery } from '@tanstack/react-query';
-import LoadingSpinner from '../../Ui/Spinner';
 import { useDispatch } from 'react-redux';
-import SalesRow from './SalesRow';
-import { getSales } from '../../services/sales';
-import { addSales } from './salesSlice';
 import EmptyPanelInfo from '../../Ui/EmptyPanelInfo';
+import LoadingSpinner from '../../Ui/Spinner';
+import { getSales } from '../../services/sales';
+import SalesRow from './SalesRow';
 function SalesList() {
   const dispatch = useDispatch();
   const { data, isLoading } = useQuery({
@@ -21,7 +20,6 @@ function SalesList() {
 
   if (data) {
     const sales = data.data.sales;
-    dispatch(addSales(sales));
 
     return (
       <div className=" overflow-x-auto rounded-lg ">

@@ -1,4 +1,5 @@
-import { format, parseISO } from 'date-fns';
+import { useQuery } from '@tanstack/react-query';
+import { format, isValid, parseISO } from 'date-fns';
 import { useSelector } from 'react-redux';
 import {
   Area,
@@ -9,15 +10,24 @@ import {
   XAxis,
   YAxis,
 } from 'recharts';
+import { getSales } from '../../services/sales';
 
 function SalesChart() {
   // salesData
-  const salesdata = useSelector((state) => state.sales.sales);
+  const { data: data1, isLoading } = useQuery({
+    queryKey: ['sales'],
+    queryFn: getSales,
+  });
 
-  const data = salesdata;
-  const sorted = data
+  const data = data1?.data?.sales;
+
+  // Filter out entries with empty sellingDate
+  const validData = data?.filter((entry) => entry.sellingDate);
+
+  const sorted = validData
     ?.slice()
-    .sort((a, b) => new Date(a.sellingDate) - new Date(b.sellingDate));
+    ?.sort((a, b) => new Date(a.sellingDate) - new Date(b.sellingDate));
+
   const newdata = sorted?.map((data) => {
     return {
       date: format(parseISO(data.sellingDate), 'dd-MMMM'),
@@ -26,10 +36,12 @@ function SalesChart() {
     };
   });
 
-  if (!data) {
+  if (!data || validData.length === 0) {
     return (
-      <div className='pt-10'>
-        <p className='text-center text-md font-semibold tracking-wider capitalize text-red-600'>cannot show dashboard with empty data!</p>
+      <div className="pt-10">
+        <p className="text-md text-center font-semibold capitalize tracking-wider text-red-600">
+          cannot show dashboard with empty data!
+        </p>
       </div>
     );
   }
@@ -61,13 +73,6 @@ function SalesChart() {
             className="text-xs font-semibold"
             unit="Rs"
           />
-          {/* <Area
-            type="monotone"
-            dataKey="quantity"
-            stroke="#84cc16"
-            fill="#1d4ed8"
-            strokeWidth={2}
-          /> */}
           <Area
             type="monotone"
             dataKey="sales"
